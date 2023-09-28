@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FavLocation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Smo-Sz-8TY">
+                                <rect key="frame" x="0.0" y="184" width="393" height="634"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of the location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gQq-jO-mik">
+                                <rect key="frame" x="16" y="74" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Note" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wa6-UY-RD0">
+                                <rect key="frame" x="16" y="128" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Smo-Sz-8TY" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="1bc-aK-UUq"/>
+                            <constraint firstItem="wa6-UY-RD0" firstAttribute="centerX" secondItem="Smo-Sz-8TY" secondAttribute="centerX" id="41k-dp-L1L"/>
+                            <constraint firstItem="gQq-jO-mik" firstAttribute="leading" secondItem="wa6-UY-RD0" secondAttribute="leading" id="M2R-CE-tN5"/>
+                            <constraint firstItem="Smo-Sz-8TY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MWs-0Y-TNo"/>
+                            <constraint firstItem="gQq-jO-mik" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="OAS-fH-ZLx"/>
+                            <constraint firstItem="gQq-jO-mik" firstAttribute="trailing" secondItem="wa6-UY-RD0" secondAttribute="trailing" id="VcR-ZM-lSG"/>
+                            <constraint firstItem="gQq-jO-mik" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="XsO-kv-SPw"/>
+                            <constraint firstItem="gQq-jO-mik" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="har-qS-N53"/>
+                            <constraint firstItem="wa6-UY-RD0" firstAttribute="top" secondItem="gQq-jO-mik" secondAttribute="bottom" constant="20" id="mhQ-ay-Nz0"/>
+                            <constraint firstItem="Smo-Sz-8TY" firstAttribute="top" secondItem="wa6-UY-RD0" secondAttribute="bottom" constant="22" id="xUy-aJ-uNu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="Smo-Sz-8TY" id="TJf-ij-DHk"/>
+                        <outlet property="nameTextField" destination="gQq-jO-mik" id="GzZ-hc-tJT"/>
+                        <outlet property="noteTextField" destination="wa6-UY-RD0" id="Gmg-gL-fed"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.76335877862595414" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
